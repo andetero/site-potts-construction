@@ -82,9 +82,30 @@ footer{padding:22px 24px 30px;max-width:1100px;margin:0 auto;color:var(--muted);
  .acts .btn{width:100%;text-align:center}
  .sticky{display:block;position:fixed;left:12px;right:12px;bottom:12px;text-align:center;z-index:9;box-shadow:0 10px 28px var(--shadow)}
 }
+picture.ph{display:block}picture.ph img{display:block;width:100%;height:auto}
+.dirt{position:relative;border-top:10px solid var(--yel)}
+.dirt picture img{height:clamp(240px,42vw,500px);object-fit:cover}
+.dirt .tag{position:absolute;left:max(24px,calc((100vw - 1100px)/2 + 24px));bottom:0;margin:0;background:var(--panel);color:var(--panel-ink);font-family:"Barlow Condensed",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:12px 18px}
+.jobs .g{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px;align-items:start}
+.jobs .g picture{margin-top:48px;border-left:6px solid var(--yel)}
+.about{padding:10px 0 60px}
+.about .w{max-width:1100px}
+.about .txt{max-width:40em;border-left:6px solid var(--yel);padding-left:22px}
+.about p{font-size:1.15rem;margin:0 0 14px}
+.area{padding:56px 0 64px;border-top:1px solid var(--line)}
+.area .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:40px}
+.area p{margin:0 0 12px}
+.area .big2{font-family:"Barlow Condensed",sans-serif;font-weight:800;text-transform:uppercase;font-size:1.6rem;line-height:1.1;margin:0 0 10px}
+.area iframe{display:block;width:100%;height:320px;border:2px solid var(--ink)}
+.area picture{margin-top:22px}
+.call .acts .btn.ln{background:transparent;color:var(--on-yel);border-color:var(--on-yel)}
+.call .acts .btn.ln:hover{background:var(--on-yel);color:var(--yel)}
+@media (max-width:820px){.jobs .g,.area .g{grid-template-columns:1fr;gap:24px}.jobs .g picture{margin-top:0}}
+@media (max-width:640px){.dirt .tag{left:12px}.call .acts{width:100%}}
 </style>
 </head>
 <body>
+<!-- Placeholder photos: royalty-free stock images (Unsplash License, details in CREDITS.md). They are not of this business. Replace them with the client's own real photos before handoff. -->
 <div class="bar"></div>
 <header class="top"><a class="cond" href="#">Potts Construction Services LLC</a><span><a href="tel:+17199637862">(719) 963-7862</a></span></header>
 <main>
@@ -111,19 +132,37 @@ footer{padding:22px 24px 30px;max-width:1100px;margin:0 auto;color:var(--muted);
  </div>
 </section>
 
+<figure class="dirt" style="margin:0">
+ <picture class="ph"><source type="image/webp" srcset="img/hero.webp"><img src="img/hero.jpg" width="1600" height="800" alt="A loader bucket dumping a load of red dirt" fetchpriority="high" decoding="async"></picture>
+ <p class="tag">Earthwork &middot; Excavation &middot; Demolition</p>
+</figure>
+
 <section class="jobs" aria-labelledby="j-h">
  <div class="w">
   <h2 id="j-h" class="cond">Services</h2>
   <p class="sub">As listed by the company.</p>
-  <table class="ledger">
-   <thead><tr><th>Service</th><th>Details</th></tr></thead>
-   <tbody>
-    <tr><td>Earthwork</td><td>Earthwork projects, with a bid on request.</td></tr>
-    <tr><td>Excavation</td><td>Excavation services.</td></tr>
-    <tr><td>Demolition</td><td>Demolition services.</td></tr>
-    <tr><td>Test pits</td><td>For septic and foundation design.</td></tr>
-   </tbody>
-  </table>
+  <div class="g">
+   <table class="ledger">
+    <thead><tr><th>Service</th><th>Details</th></tr></thead>
+    <tbody>
+     <tr><td>Earthwork</td><td>Earthwork for your next project, with a bid on request.</td></tr>
+     <tr><td>Excavation</td><td>Digging and excavation services.</td></tr>
+     <tr><td>Demolition</td><td>Tearing down and clearing out old structures.</td></tr>
+     <tr><td>Test pits</td><td>For septic and foundation design, to get your project moving.</td></tr>
+    </tbody>
+   </table>
+   <picture class="ph"><source type="image/webp" srcset="img/a.webp"><img src="img/a.jpg" width="900" height="675" alt="An orange track loader parked on a gravel road" loading="lazy" decoding="async"></picture>
+  </div>
+ </div>
+</section>
+
+<section class="about" aria-labelledby="a-h">
+ <div class="w">
+  <div class="txt">
+   <h2 id="a-h" class="cond">About us</h2>
+   <p>Potts Construction Services LLC is a family owned small business in Elbert, Colorado, offering earthwork, excavation, demolition and test pits.</p>
+   <p>The company aims to give you a great bid on your next earthwork project, and it holds a 5.0-star rating from 18 Google reviews.</p>
+  </div>
  </div>
 </section>
 
@@ -140,10 +179,29 @@ footer{padding:22px 24px 30px;max-width:1100px;margin:0 auto;color:var(--muted);
  </div>
 </section>
 
+<section class="area" aria-labelledby="ar-h">
+ <div class="w">
+  <div class="g">
+   <div>
+    <h2 id="ar-h" class="cond">Where we are</h2>
+    <p class="big2">Based in Elbert, Colorado</p>
+    <p>Potts Construction is based in Elbert, in Elbert County. Call to talk about where your project is.</p>
+    <p><b>Hours:</b> Monday to Saturday, 8 AM &ndash; 5 PM. Closed Sunday.</p>
+    <p><b>Phone:</b> <a href="tel:+17199637862">(719) 963-7862</a></p>
+    <picture class="ph"><source type="image/webp" srcset="img/b.webp"><img src="img/b.jpg" width="900" height="560" alt="A barbed wire fence across dry grassland with mountains behind" loading="lazy" decoding="async"></picture>
+   </div>
+   <iframe title="Map of Elbert, Colorado" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Elbert%2C%20CO%2080106&amp;z=11&amp;output=embed"></iframe>
+  </div>
+ </div>
+</section>
+
 <section class="call" aria-label="Call">
  <div class="w">
   <p>Call for a site visit and estimate on your next earthwork project.</p>
-  <a class="btn" href="tel:+17199637862">(719) 963-7862</a>
+  <div class="acts">
+   <a class="btn" href="tel:+17199637862">(719) 963-7862</a>
+   <a class="btn ln" href="https://www.google.com/maps/place/Potts+Construction+Services+LLC/@39.0678802,-104.5873363,17z/data=!4m6!3m5!1s0x663f6d9ea829490b:0xb7dbc2157061abe6!8m2!3d39.0678802!4d-104.5873363!16s%2Fg%2F11vjq9gthj" target="_blank" rel="noopener">See us on Google</a>
+  </div>
  </div>
 </section>
 </main>
