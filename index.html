@@ -55,9 +55,8 @@ table.ledger{width:100%;border-collapse:collapse}
 
 .ledger q{quotes:"\201C" "\201D"}
 .revs{padding:20px 0 64px}
-.revs .grid{display:grid;grid-template-columns:1.3fr 1fr;gap:28px 44px}
-.pt{margin:0;padding:0 0 18px;border-bottom:1px solid var(--line);font-size:1.15rem;font-weight:500}
-.pt:nth-child(2){margin-top:30px}
+.revs .grid{display:grid;grid-template-columns:1fr 1fr;column-gap:44px;border-top:2px solid var(--ink)}
+.pt{margin:0;padding:16px 0;border-bottom:1px solid var(--line);font-size:1.15rem;font-weight:500}
 .revs blockquote p{margin:0 0 8px}
 .revs .tall{grid-row:span 2}
 cite{font-style:normal;font-weight:600}
@@ -70,7 +69,8 @@ cite::before{content:"— "}
 footer{padding:22px 24px 30px;max-width:1100px;margin:0 auto;color:var(--muted);font-size:.9rem}
 .sticky{display:none}
 @media (max-width:820px){
- .hero .w,.revs .grid{grid-template-columns:1fr;gap:28px}
+ .hero .w{grid-template-columns:1fr;gap:28px}
+ .revs .grid{grid-template-columns:1fr}
  .revs .tall{grid-row:auto}
  .ledger thead{display:none}
  .ledger tr{display:block;border-bottom:1px solid var(--line);padding:12px 0}
